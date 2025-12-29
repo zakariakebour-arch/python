@@ -1,0 +1,68 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*Colocamos aqui la fuente para usar*/
+@font-face {
+    font-family: "mefidows";
+    src: url("../fuentes/mefidows/Mefidows DEMO VERSION.ttf");
+}
+/*Dar estilo al body*/
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+}
+/*Edicion del form*/
+form{
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+/*Editamos el titulo principal del formulario*/
+h1{
+    font-size: 60px;
+}
+/*Edicion del input*/
+input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 12px 4px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    background: transparent;
+    outline: none;
+}
+
+input::placeholder{
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+button{
+    margin-top: 20px;
+    padding: 14px 0;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border: 1px solid #000;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/*Le doy efecto hover a los botones con un nivel de opacidad de 0.85*/
+button:hover{
+    opacity: 0.85;
+}
+/*Aqui editamos la etiqueta p que se creara al lado del input asociado al error del formulario para cada campo,le daremos el color rojo*/
+p{
+    color: red; 
+    font-size: 0.9em; 
+    margin: 4px 0 10px;
+}
