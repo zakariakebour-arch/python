@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*Editamos el main*/
+main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 60px;
+    /* Fondo eliminado para que no tenga color de fondo */
+}
+
+/*El contenedor de la imagen*/
+.imagen{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Contenedor de la informacion de el zapato*/
+.informacion{
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    color: #222;
+}
+
+/*Le damos tamaño a la foto*/
+.imagen img{
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/*Estilo para los textos con tipografía avanzada*/
+.informacion h1{
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    color: #111;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.informacion h2{
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    font-weight: 600;
+    color: #555;
+    letter-spacing: 0.5px;
+    font-style: italic;
+}
+
+.informacion p{
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    line-height: 1.8;
+    color: #444;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+}
+
+/*Responsive para tablets*/
+@media (max-width: 1024px){
+    main{
+        padding: 20px;
+        gap: 40px;
+    }
+
+    .imagen img{
+        max-width: 450px;
+    }
+}
+
+/*Responsive para móviles*/
+@media (max-width: 768px){
+    main{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .informacion{
+        max-width: 100%;
+    }
+
+    .imagen img{
+        max-width: 100%;
+    }
+}
